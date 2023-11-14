@@ -13,7 +13,9 @@ const wordSlice = createSlice({
     },
     removeWord(state, action) {
       const index = state.indexOf(action.payload);
-      state.splice(index, 1);
+      if (index !== -1) {
+        state.splice(index, 1);
+      }
     },
     extraReducers(builder) {
       builder.addCase(reset, (state, action) => {
