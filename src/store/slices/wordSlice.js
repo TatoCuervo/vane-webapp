@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { reset } from "../actions/actions";
 
 // NOTE: sample Redux store slice config. Just a mutable array of words (string).
+// 'extraReducers' is used to listen to external actions (global or from another reducer)
 
 const wordSlice = createSlice({
   name: "word",
@@ -13,7 +15,11 @@ const wordSlice = createSlice({
       const index = state.indexOf(action.payload);
       state.splice(index, 1);
     },
-    //TODO: add a 'reset words' reducer
+    extraReducers(builder) {
+      builder.addCase(reset, (state, action) => {
+        return [];
+      });
+    },
   },
 });
 
