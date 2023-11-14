@@ -1,3 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { wordReducer, addWord, removeWord } from "./slices/wordSlice";
 
-// NOTE: Create the store here and use it as a central export point for store related stuff to components.
+// NOTE: Creates the store with combined reducers
+// and use it as a centralized export point for store related stuff to components.
+
+const store = configureStore({
+  reducer: {
+    words: wordReducer,
+  },
+});
+
+export { store };
+export { addWord, removeWord };

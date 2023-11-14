@@ -1,9 +1,5 @@
 import { createApi } from "@reactjs/toolkit/query/react";
 
-const sampleApi = createApi({
+const sampleApi = createApi({});
 
-});
-
-
-
-// NOTE: sample React Query API.
+// NOTE: sample React Query API config.
