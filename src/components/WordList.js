@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addWord, removeWord } from "../store/index";
+import { addWord, removeWord, reset } from "../store";
 
 // NOTE: Dummy component to Add, Remove and Display a list of words from the store.
 
@@ -29,11 +29,11 @@ function WordList() {
 
   return (
     <div>
-      <h1>APP Store</h1>
+      <h1 className="text-4xl font-extrabold dark:text-white">APP Store</h1>
       <input
         value={inputValue}
         onChange={handleOnChange}
-        className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       ></input>
       <button
         onClick={handleAddWord}
