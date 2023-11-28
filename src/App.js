@@ -1,5 +1,7 @@
+import Navbar from "./components/Navbar";
+
 function App() {
-  return "I'm Alive";
+  return <Navbar />;
 }
 
 export default App;
