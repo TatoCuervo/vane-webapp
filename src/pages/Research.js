@@ -1,5 +1,9 @@
 function Research() {
-  return <div>Research</div>;
+  return (
+    <div>
+      <h1 className="text-4xl">Research</h1>
+    </div>
+  );
 }
 
 export default Research;
