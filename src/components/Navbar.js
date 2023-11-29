@@ -9,9 +9,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+    <nav className="mt-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+        <span className="self-center text-2xl font-semibold whitespace-nowrap">
           Vanessa Arranz
         </span>
         <button
@@ -41,18 +41,30 @@ function Navbar() {
         <div
           className={(isOpen ? "" : "hidden") + " md:block w-full md:w-auto"}
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              <Link to="/about">About me</Link>
+          <ul className="font-medium flex flex-col bg-transparent p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li className="block py-2 px-3 group text-white transition duration-300 md:border-0 md:p-0">
+              <Link to="/about">
+                About me
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+              </Link>
             </li>
-            <li className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              <Link to="/publications">Publications</Link>
+            <li className="block py-2 px-3 group text-white transition duration-300 md:border-0 md:p-0">
+              <Link to="/publications">
+                Publications
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+              </Link>
             </li>
-            <li className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              <Link to="/research">Research</Link>
+            <li className="block py-2 px-3 group text-white transition duration-300 md:border-0 md:p-0">
+              <Link to="/research">
+                Research
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+              </Link>
             </li>
-            <li className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-              <Link to="/contact">Contact</Link>
+            <li className="block py-2 px-3 group text-white transition duration-300 md:border-0 md:p-0">
+              <Link to="/contact">
+                Contact
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+              </Link>
             </li>
           </ul>
         </div>

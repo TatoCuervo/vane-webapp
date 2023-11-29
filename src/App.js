@@ -9,16 +9,18 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <React.Fragment>
+    <div className='h-screen w-screen bg-[url("../public/images/bg-image.jpg")] p-4 text-white'>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/publications" element={<Publications />} />
-        <Route path="/research" element={<Research />} />
-      </Routes>
-    </React.Fragment>
+      <div className="mt-8">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/research" element={<Research />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 
