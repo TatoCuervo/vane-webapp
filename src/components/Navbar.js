@@ -9,11 +9,16 @@ function Navbar() {
   };
 
   return (
-    <nav className="mt-4">
+    <nav className="mt-4 mb-10 px-2">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap">
-          <Link to="/">Vanessa Arranz</Link>
-        </span>
+        <Link to="/">
+          <div className="flex flex-col items-center">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap">
+              Vanessa Arranz
+            </span>
+            <p className="text-xs">Marine Biologist</p>
+          </div>
+        </Link>
         <button
           onClick={toggleOpen}
           data-collapse-toggle="navbar-default"

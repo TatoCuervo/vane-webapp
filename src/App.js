@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='h-screen w-screen bg-[url("../public/images/bg-image.jpg")] p-4 text-white'>
       <Navbar />
-      <div className="mt-8">
+      <div className="flex max-w-screen-xl items-center justify-between mx-auto mt-8 px-2">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
